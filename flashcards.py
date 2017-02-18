@@ -7,8 +7,8 @@ import codecs
 
 def main():
     '''
-    Take a map of english and farsi phrases, and prompt the user to enter a
-    given farsi phrase in english.
+    Given files with a map of English and Farsi phrases, prompt user to answer
+    in English for a corresponding Farsi phrase.
     '''
 
     ground_rules = '''
@@ -34,7 +34,6 @@ def main():
     rosetta = zip(english, farsi)
 
     # randomize list
-
 
     for english_phrase, farsi_phrase in rosetta:
 
