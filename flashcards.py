@@ -2,10 +2,13 @@
 ''' Farsi flashcards on the command line. '''
 
 import sys
+import codecs
 
 
 def main():
     '''
+    Take a map of english and farsi phrases, and prompt the user to enter a
+    given farsi phrase in english.
     '''
 
     ground_rules = '''
@@ -20,16 +23,23 @@ def main():
     print(ground_rules)
 
     # load farsi/english items
-    # randomize list
+    with open('english_library_short.txt') as english_file:
+        english = english_file.readlines()
+    english = [word.strip() for word in english]
 
-    english = ['ellipsis']
-    farsi = ['...']
+    with codecs.open('farsi_library_short.txt', encoding='utf-8') as farsi_file:
+        farsi = farsi_file.readlines()
+    farsi = [word.strip() for word in farsi]
+
     rosetta = zip(english, farsi)
 
-    for english_text, farsi_text in rosetta:
+    # randomize list
+
+
+    for english_phrase, farsi_phrase in rosetta:
 
         # ask question
-        prompt = '>>> What is "{}" in english? '.format(farsi_text)
+        prompt = '>>> What is "{}" in english? '.format(farsi_phrase)
 
         while True:
             try:
@@ -39,7 +49,7 @@ def main():
 
             if answer == 's':
                 break
-            elif answer != english_text:
+            elif answer != english_phrase:
                 print('\nnope, try again')
                 continue
             else:
