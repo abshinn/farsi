@@ -2,7 +2,7 @@
 ''' Farsi flashcards on the command line. '''
 
 import sys
-
+from random import shuffle
 
 def main():
     '''
@@ -33,6 +33,7 @@ def main():
     rosetta = zip(english, farsi)
 
     # randomize list
+    shuffle(rosetta)
 
     for english_phrase, farsi_phrase in rosetta:
 
@@ -48,10 +49,10 @@ def main():
             if answer == 's':
                 break
             elif answer != english_phrase:
-                print('\nnope, try again')
+                print('\nnope, try again\n')
                 continue
             else:
-                print('{}, correct!'.format(answer))
+                print('{}, correct!\n'.format(answer))
                 break
 
 
