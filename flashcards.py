@@ -48,6 +48,9 @@ def main():
 
             if answer == 's':
                 break
+	    elif answer == '?':
+	 	print('{}\n'.format(english_phrase))
+		break
             elif answer != english_phrase:
                 print('\nnope, try again\n')
                 continue

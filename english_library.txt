@@ -11,8 +11,9 @@ lunch
 dinner
 that
 this
-apple
 bread
+apple
+cheese
 hungry
 ass
 cat
@@ -94,3 +95,18 @@ spider
 elephant
 worm
 cow
+to come
+to throw
+to stand
+to bring
+to open
+to play
+to take
+to close
+to smell
+to cook
+to ask
+to wear
+to nap
+to taste
+to talk
