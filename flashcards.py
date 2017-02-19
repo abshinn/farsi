@@ -2,7 +2,6 @@
 ''' Farsi flashcards on the command line. '''
 
 import sys
-import codecs
 
 
 def main():
@@ -23,11 +22,11 @@ def main():
     print(ground_rules)
 
     # load farsi/english items
-    with open('english_library_short.txt') as english_file:
+    with open('english_library.txt') as english_file:
         english = english_file.readlines()
     english = [word.strip() for word in english]
 
-    with codecs.open('farsi_library_short.txt', encoding='utf-8') as farsi_file:
+    with open('farsi_library.txt') as farsi_file:
         farsi = farsi_file.readlines()
     farsi = [word.strip() for word in farsi]
 
