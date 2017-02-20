@@ -110,3 +110,25 @@ to wear
 to nap
 to taste
 to talk
+day
+morning
+noon
+afternoon
+evening
+night
+week
+month
+season
+year
+decade
+century
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+ten
